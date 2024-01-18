@@ -1,17 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Form Validation</title>
-</head>
-<body>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
     <main>
-        <h1>Calorie Counter</h1>
-        <div class="container">
-        
-        </div>
-      </main>
+      <h1>Calorie Counter</h1>
+      <div class="container">
+        <form id="calorie-counter">
+          <label for="budget">Budget</label>
+          <input
+            type="number"
+            min="0"
+            id="budget"
+            placeholder="Daily calorie budget"
+            required
+          />
+        </form>
+      </div>
+    </main>
     <script src="app.js"></script>
-</body>
+  </body>
 </html>
