@@ -106,3 +106,16 @@ const renderSongs = (array) => {
     playlistSongs.innerHTML = songsHTML;
 };
 renderSongs(userData?.songs)
+
+const playSong = (id) => {
+  const song = userData?.songs.find((song) => song.id === id);
+  audio.src = song.src;
+  audio.title = song.title;
+};
+
+userData?.songs.sort((a,b) => {
+   if( a.title < b.title) {
+    return -1;
+   }
+});
+renderSongs(userData?.songs)
