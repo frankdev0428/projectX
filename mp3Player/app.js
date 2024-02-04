@@ -133,7 +133,9 @@ const getCurrentSongIndex = () => {
     return userData?.songs.indexOf(userData?.currentSong)
 }
 
-
+playlistSongElements.forEach((songEl) => {
+  songEl.removeAttribute('aria-current')
+});
 const playNextSong = () => {
   if (userData?.currentSong === null){
     playSong(userData?.songs[0].id)
